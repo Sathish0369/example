@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Table</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background: grey;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .main{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            }
+       
+
+        .button{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 70px;
+            position: relative;
+           
+            font-size: 1.5em;
+            font-family: Georgia;
+            font-style: italic;
+            text-transform: capitalize;
+        }
+        .f1{
+            background-color: hsl(59, 100%, 89%);
+            margin: 10px;
+        }
+        .f2{
+            background-color: hsl(133, 100%, 89%);
+            margin: 10px;
+        }
+        .f3{
+            background-color: hsl(177, 98%, 84%);
+            margin: 10px;
+        }
+        .f4{
+            background-color: hsl(248, 100%, 89%);
+            margin: 10px;
+        }
+        .f5{
+            background-color: hsl(304, 100%, 89%);
+            margin: 10px;
+        }
+        .f6{
+            background-color: hsl(0, 100%, 89%);
+            margin: 10px;
+        }
+
+
+        /* Hover properties */
+
+
+        .button:hover:before{
+            content: "";
+            left: 100;
+            top: 0;
+            position: absolute;
+           
+            border-top: 3px solid #000000;
+            animation: q1 2s alternate;
+        }
+        
+
+        .button:hover:after{
+            content: "";
+            right: 100;
+            bottom: 0;
+            position: absolute;
+           
+            border-bottom: 3px solid #000000;
+            animation: r1 2s alternate;
+        }
+
+       
+       
+       
+@keyframes q1{
+    0%   {width: 1px;  }
+    100% {width: 220px;}
+}
+@keyframes r1{
+    0%   {width: 1px;  }
+    100% {width: 220px;}
+}
+
+.b1{
+           height: 70px;
+           width: 220px;
+           display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 1.5em;
+            position: relative;
+        }
+        .b1:hover:before{
+            content: "";
+            left: 0;
+            top: 10;
+            position: absolute;
+           
+            border-right: 3px solid #000000;
+            animation: s1 2s alternate;
+        }
+      
+        .b1:hover:after{
+            content: "";
+            right: 0;
+            bottom: 10;
+            position: absolute;
+           
+            border-left: 3px solid #000000;
+            animation: t1 2s alternate;
+        }
+
+       
+       
+       
+@keyframes s1{
+    0%   {width: 0px;   height: 0px;}
+    100% {width: 0px; height: 70px;}
+}
+@keyframes t1{
+    0%   {width: 0px;   height: 0px;}
+    100% {width: 0px; height: 70px;}
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="f1">
+            <div class="button">
+                <div class="b1">apple</div>
+             </div>
+        </div>
+        <div class="f2">
+            <div class="button">
+                <div class="b1">ball</div>
+             </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="f3">
+            <div class="button">
+                <div class="b1">cat</div>
+             </div>
+        </div>
+        <div class="f4">
+            <div class="button">
+                <div class="b1">dog</div>
+             </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="f5">
+            <div class="button">
+                <div class="b1">elephant</div>
+             </div>
+        </div>
+        <div class=" f6">
+            <div class="button">
+                <div class="b1">fish</div>
+             </div>
+        </div>
+    </div>
+
+   
+</body>
+</html>
